@@ -23,6 +23,15 @@ Cover the whole analysis track with one pipeline where every reported number is 
 | `dbquery` | load the table into in-memory SQLite and run `query`, returning columns + rows |
 | `multistep` | run the declared modes in order |
 
+
+## Pipeline
+
+```bash
+python3 /skills/weekly-skill/scripts/analysette.py --case /input/case.json --work /app/work
+```
+
+> **脚本路径**：本技能安装于 `/skills/weekly-skill/`，脚本绝对路径为 `/skills/weekly-skill/scripts/analysette.py`（工作目录是 `/app/work`，不要用相对路径）。
+
 ## Rules that must hold
 1. **Numbers are recomputed** from the output table — never quoted.
 2. **Charts map to the table** (x/y columns from the case; row count recorded).
