@@ -1,0 +1,9 @@
+{
+  "case_id": "example-analysette",
+  "modes": ["stats", "visualize", "dbquery"],
+  "inputs": ["data.csv"],
+  "metrics": ["value", "score"],
+  "group_by": "grp",
+  "chart": {"kind": "bar", "x": "grp", "y": "value", "title": "value by group"},
+  "query": "SELECT grp, AVG(value) AS mean_value FROM data GROUP BY grp"
+}
